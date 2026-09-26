@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Instagram Size Cheat-Sheet Designers Can Keep</title>
+<meta name="description" content="Every designer eventually builds a private folder of screenshots, half-remembered numbers, and a canvas template they copied from someone two jobs ago.…">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Instagram Size Cheat-Sheet Designers Can Keep">
+<meta property="og:description" content="Every designer eventually builds a private folder of screenshots, half-remembered numbers, and a canvas template they copied from someone two jobs ago.…">
+<meta name="twitter:card" content="summary">
+</head>
+<body>
+<main style="max-width:760px;margin:3rem auto;font-family:Georgia,serif;line-height:1.7;padding:0 1rem;color:#1a1a1a">
+<article>
+<h1>The Instagram Size Cheat-Sheet Designers Can Keep</h1>
+<p>Every designer eventually builds a private folder of screenshots, half-remembered numbers, and a canvas template they copied from someone two jobs ago. Instagram sizing is the classic offender: the dimensions are not hard, but there are just enough of them that you second-guess yourself right before export. The goal of this piece is simple. Instead of memorising a dozen numbers, you can learn one anchor value and a small set of aspect ratios, then rebuild everything else from memory. That is the version of a cheat-sheet you actually keep, because it lives in your head rather than in a file you lose.</p>
+
+<h2>The one number that anchors everything</h2>
+<p>Instagram displays feed and full-screen content at roughly 1080 pixels wide. If you remember nothing else, remember that you should export at 1080px wide. Going wider does not improve quality once Instagram re-compresses your upload, and going narrower forces the platform to upscale, which softens edges and text. So the mental model is: fix the width at 1080, then let the aspect ratio decide the height. Once width is a constant, sizing stops being a memory test and becomes simple multiplication.</p>
+
+<h2>Feed posts: three ratios, one width</h2>
+<p>The main feed supports three shapes, and all of them share that 1080px width. Portrait uses a 4:5 ratio at 1080&times;1350, and it is the workhorse because it claims the most vertical space in the feed without being cropped. Square is the classic 1:1 at 1080&times;1080, still useful for grids and carousels where consistency matters. Landscape is 1.91:1 at 1080&times;566, which suits wide photography or repurposed link-preview art but takes up the least room on screen. When in doubt, design portrait first; it is the most forgiving default for reach and legibility.</p>
+
+<h2>Reels and Stories: the full-screen canvas</h2>
+<p>Reels and Stories share the same vertical frame: a 9:16 ratio at 1080&times;1920. This is the tallest canvas Instagram gives you, and it is easy to get burned by interface overlays. Keep your critical content, captions, logos, and calls to action away from the very top and bottom, because profile details, progress bars, and action buttons sit in those zones. A practical habit is to design on the full 1080&times;1920 frame but treat the outer edges as a bleed you never place anything important inside. That way one artboard serves both Reels covers and Stories without reworking the layout.</p>
+
+<h2>Profile picture and Highlight covers</h2>
+<p>Your profile picture is displayed as a circle. Upload a square around 320&times;320 and centre the subject, because the corners of that square are cropped away by the circular mask. A logo or face that sits dead-centre survives; anything pushed to a corner gets clipped. Highlight covers work differently than people expect. There is no separate small size to design for; you build the cover from a 1080&times;1920 frame with your icon centred, and Instagram crops a circle from the middle for the thumbnail. Design the icon large and centred, leave generous padding around it, and it will read cleanly at thumbnail scale.</p>
+
+<h2>The thing Instagram does not have</h2>
+<p>One point that saves a surprising amount of confusion: Instagram has no banner or cover image. Unlike a page header on other platforms, there is no wide hero graphic behind your profile. If a client or brief asks for an "Instagram banner," they are usually thinking of another network, or they mean the first row of your grid used as a visual header. Knowing this up front stops you from designing an asset that has nowhere to live.</p>
+
+<h2>Keep this table where you can see it</h2>
+<table>
+<thead>
+<tr><th>Placement</th><th>Aspect ratio</th><th>Pixel size</th><th>Notes</th></tr>
+</thead>
+<tbody>
+<tr><td>Feed portrait</td><td>4:5</td><td>1080&times;1350</td><td>Best default; most feed space</td></tr>
+<tr><td>Feed square</td><td>1:1</td><td>1080&times;1080</td><td>Great for grids and carousels</td></tr>
+<tr><td>Feed landscape</td><td>1.91:1</td><td>1080&times;566</td><td>Wide shots; least screen space</td></tr>
+<tr><td>Reels</td><td>9:16</td><td>1080&times;1920</td><td>Keep edges clear of overlays</td></tr>
+<tr><td>Stories</td><td>9:16</td><td>1080&times;1920</td><td>Same frame as Reels</td></tr>
+<tr><td>Profile picture</td><td>1:1</td><td>320&times;320</td><td>Shown as a circle; centre subject</td></tr>
+<tr><td>Highlight cover</td><td>9:16</td><td>1080&times;1920</td><td>Icon centred; circle cropped from middle</td></tr>
+</tbody>
+</table>
+
+<h2>A workflow that makes the numbers stick</h2>
+<p>Numbers are easier to keep when your tools carry them for you. Set up a small library of artboards in Figma, Illustrator, or whatever you use, one per placement, and name each frame by its purpose rather than its dimensions. Save that file as a template so every new project starts with the correct canvases already in place. If you would rather have something on paper next to your monitor, this <a href="https://stealthgram.in.net/downloads/instagram-size-cheatsheet.pdf">downloadable Instagram size cheat-sheet</a> collects the same values in a single page you can pin up and forget about until you need it.</p>
+
+<p>Two habits do most of the heavy lifting. First, design at the target size from the start instead of resizing at the end; scaling a 4:5 layout down to a square almost always breaks your type hierarchy and spacing. Second, build safe margins into your templates. A consistent inner margin, say 90 to 120 pixels on the vertical frames, keeps text off the interface overlays and gives your work room to breathe. Because everything shares the 1080px width, a carousel that mixes square and portrait slides will feel coherent as long as your margins stay constant across frames.</p>
+
+<h2>Exporting without losing quality</h2>
+<p>Export at 1080px wide, using PNG for crisp text or flat graphics and JPG for photography where file size matters. Instagram compresses uploads, so start clean: avoid heavy sharpening, keep gradients smooth, and do not stack multiple exports of the same file, since re-saving a JPG compounds artefacts. If you want to confirm a placement you rarely use, keep a bookmark to a <a href="https://stealthgram.in.net/instagram-sizes/">complete Instagram size reference</a> so you are never guessing from memory on the one dimension you forgot.</p>
+
+<p>That is the whole system. Anchor on 1080px wide, memorise the four ratios, respect the circle crop on avatars and highlights, and remember there is no banner to design. Everything else is arithmetic you can do in your head, which is exactly why this version of the cheat-sheet is the one you will actually keep.</p>
+
+<h2>Frequently asked questions</h2>
+
+<h3>What is the best Instagram post size for reach?</h3>
+<p>Portrait at 1080&times;1350 (a 4:5 ratio) is the strongest default because it occupies the most vertical space in the feed while staying uncropped. It gives photos and text more room than square or landscape, so it tends to be the most legible and eye-catching option for most content.</p>
+
+<h3>Why does my image look blurry after uploading?</h3>
+<p>Blurriness usually comes from uploading at the wrong width. If your file is narrower than 1080px, Instagram upscales it and softens the result; if it is much wider, the platform re-compresses it. Export at exactly 1080px wide, keep the file clean, and upload over a stable connection to preserve sharpness.</p>
+
+<h3>Does Instagram have a banner or cover image?</h3>
+<p>No. Instagram has no banner or cover graphic behind your profile. If a brief asks for one, it is usually borrowed from another platform, or it refers to using the first row of your feed grid as an informal header. There is no dedicated banner size to design.</p>
+
+<h3>How do I stop my profile picture from getting cropped?</h3>
+<p>Upload a square image around 320&times;320 and centre your subject. Instagram displays the avatar as a circle, so the corners of the square are cut off. Keep your logo or face in the middle with padding around it, and nothing important will be clipped.</p>
+
+<h3>Can I use the same file for Reels and Stories?</h3>
+<p>Yes. Both use the same vertical 9:16 frame at 1080&times;1920, so one artboard works for both. Just keep captions, logos, and calls to action away from the top and bottom edges, where interface elements sit, and the same design will read cleanly in either placement.</p>
+</article>
+</main>
+</body>
+</html>
